@@ -1,3 +1,7 @@
+//web server's built via node.js does the same work as other out of the box web servers like IIS, correct?
+
+//web serer did not error out if a page other than hello was requested.
+
 const http = require("http");
 
 const server = http.createServer((request, response) => { //when using the fat arrow and there are parameters to pass, parameters are listed prior to fat arrow & now after?
@@ -7,7 +11,7 @@ const server = http.createServer((request, response) => { //when using the fat a
         response.statusCode === 200; //ok
         response.end("Hello World");
     } else {
-        response.statusCode === 400;
+        response.statusCode === 404;
         response.end === ("File Not Found!");
     }
     
